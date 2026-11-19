@@ -171,7 +171,7 @@
   }
 
   .hero-media {
-    --hero-logo-lift: 1.5rem;
+    --hero-logo-lift: 4.5rem;
     width: min(100%, 430px);
   }
 
@@ -260,6 +260,10 @@
 
   .hero {
     padding-top: 2.75rem;
+  }
+
+  .hero::before {
+    display: none;
   }
 
   .hero-title {
@@ -363,13 +367,8 @@
   }
 
   .hero-media {
-    --hero-logo-lift: 0rem;
+    --hero-logo-lift: 1.75rem;
     width: 100%;
-  }
-
-  .hero::before {
-    right: -30%;
-    width: 110%;
   }
 
   .google-panel {
@@ -390,10 +389,8 @@
     align-items: flex-start;
   }
 
-  .monogram {
-    width: 66px;
-    height: 66px;
-    font-size: 1.4rem;
+  .profile-photo {
+    width: 130px;
   }
 
   .location-card__head {

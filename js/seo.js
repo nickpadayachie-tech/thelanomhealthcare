@@ -3,6 +3,7 @@
 
   var GOOGLE_PROFILE = "https://share.google/8McsKuqzAmhLcni2U";
   var PHONE = "+27834350021";
+  var EMAIL = "NomsaMatena@Thelanomhealthcare.co.za";
 
   var SEBOKENG_ADDRESS = {
     "@type": "PostalAddress",
@@ -173,6 +174,7 @@
       logo: absolute("assets/logo/orange-helping-hand-emblem.png"),
       image: absolute("assets/logo/og-image.png"),
       telephone: PHONE,
+      email: EMAIL,
       sameAs: [GOOGLE_PROFILE],
       founder: { "@id": personId },
       employee: { "@id": personId },
@@ -180,6 +182,7 @@
         {
           "@type": "ContactPoint",
           telephone: PHONE,
+          email: EMAIL,
           contactType: "appointments",
           areaServed: "ZA",
           availableLanguage: ["English"]
@@ -203,12 +206,13 @@
       "@type": "Person",
       "@id": personId,
       name: "Nomsa Matena",
-      jobTitle: "Registered Nurse",
+      jobTitle: "Private Nurse Practitioner",
       telephone: PHONE,
+      email: EMAIL,
       worksFor: { "@id": orgId },
       identifier: {
         "@type": "PropertyValue",
-        name: "Professional registration number",
+        name: "Practice number",
         value: "0034169"
       },
       knowsAbout: ["General nursing", "Psychiatric nursing", "Community nursing"]
