@@ -1486,6 +1486,63 @@ button {
   font-weight: 500;
 }
 
+.abbr-tooltip {
+  position: relative;
+  border-bottom: 1px dotted var(--text-muted);
+  cursor: help;
+  text-decoration: none;
+}
+
+.abbr-tooltip::after,
+.abbr-tooltip::before {
+  position: absolute;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.abbr-tooltip::after {
+  content: attr(data-tooltip);
+  bottom: calc(100% + 0.6rem);
+  left: 50%;
+  width: max-content;
+  max-width: min(220px, 70vw);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--charcoal);
+  box-shadow: var(--shadow-md);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  transform: translate(-50%, 4px);
+}
+
+.abbr-tooltip::before {
+  content: "";
+  bottom: calc(100% + 0.28rem);
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--charcoal);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.abbr-tooltip:hover::after,
+.abbr-tooltip:hover::before,
+.abbr-tooltip:focus-visible::after,
+.abbr-tooltip:focus-visible::before {
+  opacity: 1;
+}
+
+.abbr-tooltip:hover::after,
+.abbr-tooltip:focus-visible::after {
+  transform: translate(-50%, 0);
+}
+
 .profile-body {
   padding: clamp(1.5rem, 3vw, 2rem);
 }
@@ -2328,7 +2385,17 @@ td {
   padding: 0.7rem 0.9rem;
   border-radius: var(--radius-sm);
   background: var(--white);
+  box-shadow:
+    0 0 0 1px #E4A38F,
+    0 0 22px rgba(228, 163, 143, 0.4);
   text-decoration: none;
+  transition: box-shadow var(--transition);
+}
+
+.brand-chip:hover {
+  box-shadow:
+    0 0 0 2px #E4A38F,
+    0 0 30px rgba(228, 163, 143, 0.65);
 }
 
 .brand-chip img {
