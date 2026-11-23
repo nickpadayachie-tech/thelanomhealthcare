@@ -90,7 +90,11 @@
 
     words.forEach(function (word, wordIndex) {
       if (wordIndex > 0) {
-        letters.appendChild(document.createTextNode(" "));
+        var space = document.createElement("span");
+        space.className = "reveal-space";
+        space.setAttribute("aria-hidden", "true");
+        space.textContent = " ";
+        letters.appendChild(space);
       }
 
       var wordSpan = document.createElement("span");
