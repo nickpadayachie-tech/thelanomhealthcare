@@ -3,11 +3,11 @@
 
   var GOOGLE_PROFILE = "https://share.google/8McsKuqzAmhLcni2U";
   var PHONE = "+27834350021";
-  var EMAIL = "NomsaMatena@Thelanomhealthcare.co.za";
+  var EMAIL = "SrNomsaM@ThelanomHealthCare.co.za";
 
   var SEBOKENG_ADDRESS = {
     "@type": "PostalAddress",
-    streetAddress: "Consulting Room 2, Mandela Square Pharmacy, Moshoeshoe Street",
+    streetAddress: "Shop number 3, Mandela Square Pharmacy, Boitumelo",
     addressLocality: "Sebokeng",
     postalCode: "1983",
     addressRegion: "Gauteng",
@@ -16,7 +16,7 @@
 
   var VANDERBIJLPARK_ADDRESS = {
     "@type": "PostalAddress",
-    streetAddress: "Consulting Room 1, A1 Omega Building, FW Beyers Street",
+    streetAddress: "Consulting Room 2, A1 Omega Building, FW Beyers Street",
     addressLocality: "Vanderbijlpark",
     postalCode: "1911",
     addressRegion: "Gauteng",
@@ -28,7 +28,7 @@
     { name: "Postnatal Care", slug: "postnatal-care" },
     { name: "Well-Baby Clinic and Immunisation", slug: "well-baby-clinic" },
     { name: "Family Planning", slug: "family-planning" },
-    { name: "HIV Counselling and Testing", slug: "hiv-counselling" },
+    { name: "HIV Management", slug: "hiv-counselling" },
     { name: "Wound Care", slug: "wound-care" },
     { name: "Minor Ailments", slug: "minor-ailments" },
     { name: "Pregnancy Testing", slug: "pregnancy-testing" },
@@ -36,16 +36,10 @@
   ];
 
   var SEBOKENG_DIRECTIONS =
-    "https://www.google.com/maps/dir/?api=1&destination=" +
-    encodeURIComponent(
-      "Consulting Room 2, Mandela Square Pharmacy, Moshoeshoe Street, Sebokeng, 1983, Gauteng, South Africa"
-    );
+    "https://www.google.com/maps/dir/-26.1170718,28.0044334/Boitumelo+pharmacy,+Shop+No,+3+Mandela+Square,+Sebokeng,+Vanderbijlpark,+1983/@-26.3388128,27.5771201,10z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x1e945476afc292dd:0xfdf3cec22be68136!2m2!1d27.8290281!2d-26.5627856?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D";
 
   var VANDERBIJLPARK_DIRECTIONS =
-    "https://www.google.com/maps/dir/?api=1&destination=" +
-    encodeURIComponent(
-      "Consulting Room 1, A1 Omega Building, FW Beyers Street, Vanderbijlpark, 1911, Gauteng, South Africa"
-    );
+    "https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBwgCEAAY7wUyBggAEEUYOTIHCAEQABjvBTIHCAIQABjvBTIHCAMQABjvBTIHCAQQABjvBdIBCjE4NzU2ajBqMTWoAgiwAgHxBUTVO060KsgR&um=1&ie=UTF-8&fb=1&gl=za&sa=X&geocode=KX1plY37WZQeMfsEXlqIF9yz&daddr=Shop+A1,+Omega+Building,+F+W+Beyers+St,+Vanderbijlpark+C.+C.,+Vanderbijlpark,+1911";
 
   var PAGE_META = {
     home: {
@@ -69,7 +63,7 @@
       type: "CollectionPage",
       name: "Healthcare Services",
       description:
-        "Antenatal care, postnatal care, well-baby clinic and immunisation, family planning, HIV counselling and testing, wound care, minor ailments, pregnancy testing and Pap smear.",
+        "Antenatal care, postnatal care, well-baby clinic and immunisation, family planning, HIV management, wound care, minor ailments, pregnancy testing and Pap smear.",
       breadcrumb: [
         { name: "Home", path: "index.html" },
         { name: "Our Services", path: "services.html" }
