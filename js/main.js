@@ -64,6 +64,55 @@
     document.body.appendChild(floater);
   }
 
+  function initHeroAccentReveal() {
+    var accent = document.querySelector("[data-hero-reveal]");
+
+    if (!accent || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    var text = accent.textContent.trim();
+
+    if (!text) {
+      return;
+    }
+
+    var accessibleText = document.createElement("span");
+    accessibleText.className = "sr-only";
+    accessibleText.textContent = text;
+
+    var letters = document.createElement("span");
+    letters.className = "hero-reveal-letters";
+    letters.setAttribute("aria-hidden", "true");
+
+    var words = text.split(/\s+/);
+    var letterIndex = 0;
+
+    words.forEach(function (word, wordIndex) {
+      if (wordIndex > 0) {
+        letters.appendChild(document.createTextNode(" "));
+      }
+
+      var wordSpan = document.createElement("span");
+      wordSpan.className = "hero-reveal-word";
+
+      word.split("").forEach(function (character) {
+        var letter = document.createElement("span");
+        letter.className = "reveal-letter";
+        letter.style.setProperty("--letter-index", String(letterIndex));
+        letter.textContent = character;
+        wordSpan.appendChild(letter);
+        letterIndex += 1;
+      });
+
+      letters.appendChild(wordSpan);
+    });
+
+    accent.textContent = "";
+    accent.appendChild(accessibleText);
+    accent.appendChild(letters);
+  }
+
   function initNavigation() {
     var body = document.body;
     var toggle = document.querySelector(".nav-toggle");
@@ -638,6 +687,7 @@
   function init() {
     injectIcons();
     initWhatsAppFloater();
+    initHeroAccentReveal();
     initNavigation();
     initHeaderState();
     initServiceGallery();

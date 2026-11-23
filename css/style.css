@@ -721,6 +721,23 @@ button {
   text-underline-offset: 0.12em;
 }
 
+.hero-reveal-word,
+.reveal-letter {
+  text-decoration: inherit;
+}
+
+.hero-reveal-word {
+  white-space: nowrap;
+}
+
+.reveal-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.3em);
+  animation: hero-letter-in 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(180ms + var(--letter-index) * 80ms);
+}
+
 .hero-copy .lead {
   max-width: 54ch;
   margin-bottom: 2rem;
@@ -2685,6 +2702,17 @@ td {
   }
 }
 
+@keyframes hero-letter-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.3em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes floater-in {
   from {
     opacity: 0;
@@ -2775,5 +2803,11 @@ td {
     animation: none !important;
     transition: none !important;
     transform: none !important;
+  }
+
+  .reveal-letter {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
   }
 }
