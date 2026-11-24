@@ -86,15 +86,22 @@
     letters.setAttribute("aria-hidden", "true");
 
     var words = text.split(/\s+/);
+    var breakAfter = parseInt(accent.getAttribute("data-hero-break-after"), 10);
     var letterIndex = 0;
 
     words.forEach(function (word, wordIndex) {
       if (wordIndex > 0) {
-        var space = document.createElement("span");
-        space.className = "reveal-space";
-        space.setAttribute("aria-hidden", "true");
-        space.textContent = " ";
-        letters.appendChild(space);
+        if (breakAfter === wordIndex) {
+          var lineBreak = document.createElement("br");
+          lineBreak.setAttribute("aria-hidden", "true");
+          letters.appendChild(lineBreak);
+        } else {
+          var space = document.createElement("span");
+          space.className = "reveal-space";
+          space.setAttribute("aria-hidden", "true");
+          space.textContent = " ";
+          letters.appendChild(space);
+        }
       }
 
       var wordSpan = document.createElement("span");

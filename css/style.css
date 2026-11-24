@@ -705,12 +705,17 @@ button {
 }
 
 .hero-title {
-  max-width: 12ch;
+  max-width: 16ch;
   margin-bottom: 1.5rem;
+  text-align: left;
   font-family: var(--font-body);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.025em;
+}
+
+.hero-line {
+  display: block;
 }
 
 .hero-accent {
