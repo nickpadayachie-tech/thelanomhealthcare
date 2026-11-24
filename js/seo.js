@@ -32,7 +32,15 @@
     { name: "Wound Care", slug: "wound-care" },
     { name: "Minor Ailments", slug: "minor-ailments" },
     { name: "Pregnancy Testing", slug: "pregnancy-testing" },
-    { name: "Pap Smear", slug: "pap-smear" }
+    { name: "Pap Smear", slug: "pap-smear" },
+    { name: "Vitamin Injections", slug: "vitamin-injections" },
+    { name: "Flu Vaccine Injections", slug: "flu-vaccine-injections" },
+    { name: "Cholesterol Testing", slug: "cholesterol-testing" },
+    { name: "Glucose Testing", slug: "glucose-testing" },
+    { name: "Blood Pressure Monitoring", slug: "blood-pressure-monitoring" },
+    { name: "Urine Testing", slug: "urine-testing" },
+    { name: "Removal of Stitches", slug: "removal-of-stitches" },
+    { name: "Phlebotomy Services - Blood Tests", slug: "phlebotomy-services" }
   ];
 
   var SEBOKENG_DIRECTIONS =
@@ -63,7 +71,7 @@
       type: "CollectionPage",
       name: "Healthcare Services",
       description:
-        "Antenatal care, postnatal care, well-baby clinic and immunisation, family planning, HIV management, wound care, minor ailments, pregnancy testing and Pap smear.",
+        "Antenatal and postnatal care, baby wellness, family planning, HIV management, wound care, testing, vaccinations, injections and phlebotomy services.",
       breadcrumb: [
         { name: "Home", path: "index.html" },
         { name: "Our Services", path: "services.html" }
